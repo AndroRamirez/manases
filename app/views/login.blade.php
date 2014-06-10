@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-        {{ HTML::style('css/bootstrap.min.css'); }}
-    </head>
-    <body>
-        <div class="container">
-            <div class="panel panel-default">
+@extends('layouts.master')
+ 
+@section('sidebar')
+     @parent
+     <h1>Login</h1>
+@stop
+ 
+@section('content')
+    
+    <div class="panel panel-default">
                 <div class="panel-body">
                     {{-- Preguntamos si hay algún mensaje de error y si hay lo mostramos  --}}
                     @if(Session::has('mensaje_error'))
@@ -25,7 +25,7 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                Recordar contraseña
+                                Recordar contrase&ntilde;a
                                 {{ Form::checkbox('rememberme', true) }}
                             </label>
                         </div>
@@ -33,8 +33,4 @@
                     {{ Form::close() }}
                 </div>
             </div>
-        </div>
-        {{ HTML::script('js/jquery.min.js'); }}
-        {{ HTML::script('js/bootstrap.min.js'); }}
-    </body>
-</html>
+@stop

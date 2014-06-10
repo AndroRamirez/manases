@@ -13,7 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+       return View::make('hello');
+       return View::make('index');
 });
 
 // formulario de login
@@ -33,3 +34,5 @@ Route::group(array('before' => 'auth'), function()
     // 
     Route::get('logout', 'AuthController@logOut');
 });
+
+Route::get('admin', 'AdminController@admin');

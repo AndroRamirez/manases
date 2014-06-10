@@ -5,6 +5,5 @@
 @stop
  
 @section('content')
-        <h1>Bienvenido {{ Auth::user()->name; }}</h1>
-        <a href="./logout">Cerrar sesión.</a>
+        <h1>Index</h1>
 @stop        
