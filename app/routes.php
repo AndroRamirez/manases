@@ -15,3 +15,21 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+// formulario de login
+Route::get('login', 'AuthController@showLogin');
+
+// 
+Route::post('login', 'AuthController@postLogin');
+
+// 
+Route::group(array('before' => 'auth'), function()
+{
+    // 
+    Route::get('/', function()
+    {
+        return View::make('hello');
+    });
+    // 
+    Route::get('logout', 'AuthController@logOut');
+});
