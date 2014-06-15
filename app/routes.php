@@ -13,21 +13,17 @@
 
 Route::get('/', function()
 {
-       return View::make('hello');
+      // return View::make('hello');
        return View::make('index');
 });
 
 // formulario de login
 Route::get('login', 'AuthController@showLogin');
-
-// 
 Route::post('login', 'AuthController@postLogin');
-
-// 
 Route::group(array('before' => 'auth'), function()
 {
     // 
-    Route::get('/', function()
+    Route::get('/hello', function()
     {
         return View::make('hello');
     });
@@ -35,4 +31,8 @@ Route::group(array('before' => 'auth'), function()
     Route::get('logout', 'AuthController@logOut');
 });
 
+//adminsitracion
 Route::get('admin', 'AdminController@admin');
+
+//modulos de usuarios
+Route::resource('admin/users', 'Admin_UsersController');

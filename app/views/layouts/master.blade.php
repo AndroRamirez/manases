@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+            <title>@yield('title', 'Aplicaci&oacute;n laravel')</title>
             <meta charset="utf-8">
             <!-- css -->
             {{ HTML::style('css/bootstrap.min.css'); }}

@@ -1,5 +1,7 @@
 @extends('layouts.master')
- 
+
+@section ('title') Avrora System @stop
+
 @section('sidebar')
      @parent
 @stop
