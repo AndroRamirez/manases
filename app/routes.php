@@ -35,4 +35,4 @@ Route::group(array('before' => 'auth'), function()
 Route::get('admin', 'AdminController@admin');
 
 //modulos de usuarios
-Route::resource('admin/users', 'Admin_UsersController');
+Route::resource('admin/users', 'admin_UsersController');
