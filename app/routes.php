@@ -20,6 +20,7 @@ Route::get('/', function()
 // formulario de login
 Route::get('login', 'AuthController@showLogin');
 Route::post('login', 'AuthController@postLogin');
+
 Route::group(array('before' => 'auth'), function()
 {
     // 
