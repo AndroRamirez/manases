@@ -42,6 +42,10 @@
       {{ Form::text('username', null, array('placeholder' => 'Login', 'class' => 'form-control')) }}        
     </div>
     <div class="form-group">
+      {{ Form::label('cedula', 'C&eacute;dula') }}
+      {{ Form::text('cedula', null, array('placeholder' => 'Introduce tu c&eacute;dula', 'class' => 'form-control')) }}        
+    </div>  
+    <div class="form-group">
       {{ Form::label('email', 'Dirección de E-mail') }}
       {{ Form::text('email', null, array('placeholder' => 'Introduce tu E-mail', 'class' => 'form-control')) }}
     </div>

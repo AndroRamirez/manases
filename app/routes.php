@@ -37,3 +37,9 @@ Route::get('admin', 'AdminController@admin');
 
 //modulos de usuarios
 Route::resource('admin/users', 'admin_UsersController');
+
+//modulos de iglesia
+Route::resource('iglesia/main', 'iglesia_OfrendasController');
+
+//Ajax par abuscar por cedula
+Route::post('iglesia/ajax', 'iglesia_OfrendasController@ajax');

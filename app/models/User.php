@@ -25,7 +25,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         
         public $errors;
         
-        protected $fillable = array('email', 'name', 'password', 'username');
+        protected $fillable = array('email', 'name', 'password', 'username', 'cedula');
         
     
         public function isValid($data)
@@ -34,13 +34,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
                 'username' => 'required|min:4|max:20',
                 'email'     => 'required|email|unique:users',
                 'name' => 'required|min:4|max:40',
-                'password'  => 'min:8|confirmed'
+                'password'  => 'min:8|confirmed',
+                'cedula'  => 'required|min:6|unique:users'
             );
             
             if ($this->exists)
             {
                 //Evitamos que la regla “unique” tome en cuenta el email del usuario actual
                 $rules['email'] .= ',email,' . $this->id;
+                $rules['cedula'] .= ',cedula,' . $this->id; 
             }
              else // Si no existe...
                 {

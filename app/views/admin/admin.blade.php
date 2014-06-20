@@ -24,6 +24,16 @@
                 </a>
             </div>
             <div class="btn-group">
+                <a href="./iglesia/main"> 
+                    <span class="glyphicon glyphicon-home" style="font-size:48px;"></span>
+                        <!-- <button type="button" class="btn btn-default" >
+                            <img src="./images/admin/users.png" />
+                            Usuarios
+                        </button> -->
+                        Administraci&oacute;n eclesi&aacute;stica
+                </a>
+            </div>
+            <div class="btn-group">
                 <a href="./logout"> 
                      <span class="glyphicon glyphicon-log-out" style="font-size:48px;"></span>
                         <!-- <button type="button" class="btn btn-default" >
