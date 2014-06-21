@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <!-- css -->
-    {{ HTML::style('css/bootstrap.css'); }}
-    {{ HTML::style('css/normalize.css'); }}
+    {{ HTML::style('css/bootstrap.min.css'); }}
 
     <!-- js -->
     {{ HTML::script('js/jquery.min.js'); }}
@@ -62,9 +61,8 @@
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
-          
     </div>
-    
+      
     
     <div class="container theme-showcase" role="main">
         <div><blockquote class="pull-right">
@@ -92,18 +90,22 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="page-header">
-                        <h2>@yield('title')</h2>
+                        <h3>@yield('title')</h3>
                     </div>
                 
-                    <div class="list-group">
-                        <a href="#" class="list-group-item active">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cras justo odio
-                          </a>
-                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                        <a href="./logout" class="list-group-item">
-                            <span class="glyphicon glyphicon-log-out"></span> Cerrar sesi&oacute;n
-                          </a>
-                  </div>
+                    <div class="well" style="padding: 8px 0;">
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Encabezado de lista</li>
+                          <li class="active"><a href="#"><i class="icon-white icon-home"></i> Home</a></li>
+                          <li><a href="#"><i class="icon-book"></i> Librería</a></li>
+                          <li><a href="#"><i class="icon-pencil"></i> Aplicaciones</a></li>
+                          <li class="nav-header">Otro encabezado de lista</li>
+                          <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+                          <li><a href="#"><i class="icon-cog"></i> Ajustes</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><i class="icon-flag"></i> Ayuda</a></li>
+                        </ul>
+                      </div>
 
                 </div>
                 <div class="col-sm-9">
@@ -116,11 +118,11 @@
           </div>
         </div>
     </div>
-    <div id="footer">
+   {{-- <div id="footer">
         <div class="container">
-            <p class="text-muted">Developed by Manasseh Software</p>
+            <p class="text-muted">Place sticky footer content here.</p>
         </div>
-    </div> 
+    </div> --}}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

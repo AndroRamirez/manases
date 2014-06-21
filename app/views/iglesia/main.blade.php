@@ -4,9 +4,13 @@
      @parent
 @stop
 
-@section ('title') Relaci&oacute;n de diezmos y ofrendas @stop
+@section ('title_alt') Relaci&oacute;n de diezmos y ofrendas @stop
+
+@section ('title') Opciones del m&oacute;dulo @stop
 
 @section ('modulo') Administraci&oacute;n eclesi&aacute;stica @stop
+
+@section ('descripcion') Administraci&oacute;n eclesi&aacute;stica @stop
 
 @section('content')
    {{ Form::open(array('url' => 'iglesia/ajax', 'id' => 'iglesiaForm', 'autocomplete' => 'off')) }}
@@ -89,10 +93,10 @@
                     var nombre = $(this).attr('nom');
                     
                     var tr = "<tr>";
-                    tr +="<td>"+nombre+"</td><td>"+cedula+"</td>";
-                    tr +="<td><input placeholder='Diezmo' class='form-control' name='ofrendas["+cedula+"][diezmo]' type='text'></td>";
-                    tr +="<td><input placeholder='Misiones' class='form-control' name='ofrendas["+cedula+"][misiones]' type='text'></td>";
-                    tr +="<td><input placeholder='Protemplo' class='form-control' name='ofrendas["+cedula+"][protemplo]' type='text'></td>";
+                    tr +="<td><small>"+nombre+"</small></td><td><small>"+cedula+"</small></td>";
+                    tr +="<td><div class='input-group'><span class='input-group-addon'>$</span><input placeholder='Diezmo' class='form-control' name='ofrendas["+cedula+"][diezmo]' type='text'><span class='input-group-addon'>.00</span></div></td>";
+                    tr +="<td><div class='input-group'><span class='input-group-addon'>$</span><input placeholder='Misiones' class='form-control' name='ofrendas["+cedula+"][misiones]' type='text'><span class='input-group-addon'>.00</span></div></td>";
+                    tr +="<td><div class='input-group'><span class='input-group-addon'>$</span><input placeholder='Protemplo' class='form-control' name='ofrendas["+cedula+"][protemplo]' type='text'><span class='input-group-addon'>.00</span></div></td>";
                     tr +="<td align='center'><span class='glyphicon glyphicon-remove'></span></td>";
                     tr +="</tr>";
                     $("#listadoOfrendas").append(tr);

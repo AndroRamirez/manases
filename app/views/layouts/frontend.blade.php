@@ -5,6 +5,7 @@
             <meta charset="utf-8">
             <!-- css -->
             {{ HTML::style('css/bootstrap.min.css'); }}
+            {{ HTML::style('css/normalize.css'); }}
             
             <!-- js -->
             {{ HTML::script('js/jquery.min.js'); }}

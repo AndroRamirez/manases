@@ -43,3 +43,5 @@ Route::resource('iglesia/main', 'iglesia_OfrendasController');
 
 //Ajax par abuscar por cedula
 Route::post('iglesia/ajax', 'iglesia_OfrendasController@ajax');
+
+Route::get('/', 'HomeController@showWelcome');
